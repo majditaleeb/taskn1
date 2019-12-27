@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-          <b-form-group>
-
-                <b-countainer-fluied>
-
-                    <b-row class="my-1">
+    <div>
+        <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+            <b-form-group>
+                <b-counter-fluid>
+              <b-row class="my-1">
                         <b-col sm="1">
                             <label for="input-firstName">First Name *:</label>
                             </b-col>
@@ -29,12 +27,12 @@
                             </b-col>
 
                         </b-row>
+                </b-counter-fluid>
 
-                    
-                </b-countainer-fluied>
-        </b-form-group>
-
-        <b-form-group >
+               
+            </b-form-group>
+             
+             <b-form-group >
              <b-countainer-fluied>
 
                     <b-row class="my-1">
@@ -70,7 +68,6 @@
 
                   
       </b-form-group>
-
 
       <b-form-group >
              <b-countainer-fluied>
@@ -112,8 +109,7 @@
                   
       </b-form-group>
 
-
-     <b-form-group>
+      <b-form-group>
          <b-countainer-fluid>
                 <b-row class="my-1">
                         <b-col sm="1">
@@ -156,7 +152,7 @@
 
 
 
-<b-form-group>
+     <b-form-group>
          <b-countainer-fluid>
                 <b-row class="my-1">
                         <b-col sm="1">
@@ -219,8 +215,6 @@
           </b-countainer-fluid>
 
       </b-form-group>
-
-
        <b-form-group>
           <b-countainer-fluid>
                   <b-row class="my-1">
@@ -244,40 +238,11 @@
 
       </b-form-group>
 
-
-
-      
-      
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
-
-
-
-        
-
-        <b-form-group label ="Reference / Comments / Questions" width:50%>
+  <b-form-group label ="Reference / Comments / Questions" >
         
                 <b-form-textarea
-                        id="textarea"
-                        v-model="text"
+                      
+                        v-model="form.text"
                         placeholder="Enter something..."
                         rows="3"
                         max-rows="6"
@@ -285,20 +250,28 @@
                 </b-form-textarea>
 
         </b-form-group>
+       
 
 
 
 
 
 
- 
-      <b-button type="submit" variant="primary">Submit</b-button>
+           <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
-    </b-form>
-   
-  </div>
-</template>
 
+
+
+
+
+
+        </b-form>
+        <b-card class="mt-3" header="Form Data Result">
+      <pre class="m-0">{{ form }}</pre>
+    </b-card>
+
+    </div>
+</template>
 <script>
   export default {
     data() {

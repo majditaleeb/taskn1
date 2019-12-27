@@ -1,17 +1,17 @@
 <template>
-  <div class="about">
-    <h2>This is an about page</h2>
-   
+  <div class >
+   <task-num />
   </div>
 </template>
 <script>
-// @ is an alias to /src
-//import WelcomeMessage from "@/components/WelcomeMessage.vue";
-
+import TaskNum from "@/components/TaskNum"
 export default {
-  name: "about",
-  components: {
-   
+  // data we will flll it
+
+  name :"about",
+  components:{
+    TaskNum
   }
-};
+
+}
 </script>

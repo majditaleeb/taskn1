@@ -2,8 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from  "../views/Home.vue";
 import Help from "../views/Help.vue";
-import Test from "../views/Test.vue";
 
+//import Mj from '../views/Mj.vue';
 Vue.use (Router);
 export default new Router({
 mode : "history",
@@ -15,15 +15,13 @@ routes :[
     component : Home
 },
 {
-    path:"/test",
-    name:'test',
-    component:Test,
+
+    path : "/help",
+    name : "help",
+    component : Help
 },
-{
-    path:"/help",
-    name:"help",
-    component:Help,         
-},
+
+
 
  {   
 
