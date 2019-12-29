@@ -1,7 +1,10 @@
 <template>
     <div  class ="header">
        <div class= "container">
-        <div class = "logo"> majdi benz</div>
+        <div class = "logo"> 
+            job 
+            application
+        </div>
     <ul class="text-right">
       <router-link to="/" tag ="li">
       <a> home</a> 

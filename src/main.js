@@ -6,7 +6,10 @@ import store from "./store";
  import 'bootstrap/dist/css/bootstrap.css'
  import 'bootstrap-vue/dist/bootstrap-vue.css'
 import "normalize.css";
-
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+ 
+Vue.use(VueAxios, axios)
 
 import BootstrapVue from 'bootstrap-vue'
 

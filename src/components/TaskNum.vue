@@ -273,6 +273,7 @@
     </div>
 </template>
 <script>
+
   export default {
     data() {
       return {
@@ -300,13 +301,8 @@
     },
     methods: {
       onSubmit(evt) {
-        evt.preventDefault()
-        alert(JSON.stringify(this.form))
-      },
-      onReset(evt) {
-        evt.preventDefault()
-        // Reset our form values
-        this.form.email = ''
+       
+          this.form.email = ''
         this.form.firstName = ''
         this.form.lastName=''
         this.form.linkedin=''
@@ -318,6 +314,13 @@
         this.form.text=''
         this.form.when = null
         this.form.lastCompany=''
+         evt.preventDefault()
+        alert(JSON.stringify(this.form))
+      },
+      onReset(evt) {
+        evt.preventDefault()
+        // Reset our form values
+     
       
         // Trick to reset/clear native browser form validation state
         this.show = false
@@ -325,6 +328,7 @@
           this.show = true
         })
       }
+
     }
   }
 </script>
